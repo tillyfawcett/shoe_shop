@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Shoes</h1>
+  <div class="row">
+    <% @shoes.each do |shoe| %>
+      <div class="col-6 col-md-4">
+        <div class="card">
+          <%= image_tag shoe.photo_url , class: "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= shoe.name %></h5>
+            <p class="card-text"><%= shoe.category.name %>
+            Amount: <%= humanized_money_with_symbol(shoe.price) %></p>
+            <%= link_to "More details", shoe_path(shoe), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
