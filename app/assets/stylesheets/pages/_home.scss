@@ -1,1 +1,65 @@
 // Specific CSS for your home-page
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-footer {
+  background-color: #C4C4C4;
+  padding: 20px;
+}
+
+.help {
+  text-align: end;
+}
+
+a {
+  text-decoration: none!important;
+  color: black!important;
+}
+
+.banner {
+  background-color: #C4C4C4;
+  height: 60vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #C4C4C4;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: auto auto auto;
+  // background-color: #2196F3;
+  padding: 50px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BADEFC;
+  // border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 50vh;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
